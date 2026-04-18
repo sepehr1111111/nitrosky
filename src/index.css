@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@keyframes flyOutRight {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(250%); }
+}
+
+@keyframes flyInLeft {
+  0% { transform: translateX(-250%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-fly-out {
+  animation: flyOutRight 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-fly-in {
+  animation: flyInLeft 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes flyOutUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-150%); }
+}
+
+@keyframes flyInUp {
+  0% { transform: translateY(150%); }
+  100% { transform: translateY(0); }
+}
+
+.animate-fly-out-up {
+  animation: flyOutUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-fly-in-up {
+  animation: flyInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
